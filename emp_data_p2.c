@@ -12,7 +12,7 @@ int main(){
 	if(pfile == NULL){
 		printf("file can't be opened");
 	}else{
-	
+	// write data to the fill ....
 	for(i=0;i<n;i++){
 		printf("enter the name : ");
 		scanf("%s",name);
@@ -26,12 +26,14 @@ int main(){
 	}
 	fclose(pfile);
 	}
+	
 	pfile = fopen("data.txt","r");
 	
+	// read data from the file ....
 	while(fscanf(pfile,"%s\t %d\t %d",name,&id,&age) != EOF){
 		printf("name = %s \t, id = %d\t and age = %d\n",name,id,age);
 	}
-	
+	// #cool...
 	fclose(pfile);
 	return 0;
 }
